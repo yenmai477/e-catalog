@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "product",
+  "type": "object",
+  "properties": {
+    "productName": {
+      "type": "string",
+      "minLength": 2,
+      "pattern": "^[^-\\s][a-zA-Z0-9_\\s.-]+$"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 2
+    },
+    "price": {
+      "type": "number",
+      "minimum": 0
+    },
+    "maker": {
+      "type": "string",
+      "minLength": 2
+    }
+  },
+  "required": [
+    "productName",
+    "description",
+    "price",
+    "maker"
+  ],
+  "additionalProperties": false
+}
